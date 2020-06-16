@@ -1,0 +1,6 @@
+﻿PuzzleId,Comment,Question,JumbledWords,RequiredWordLengths
+1,I feel better already. ,"When the acupuncture worked, the patient said it was ---","('nagld', [2 4 5]); ('ramoj', [3 4]); ('camble', [1 2 4]); ('wraley', [1 3 5])",[3 4 4]
+2,Stop that! What is with you? I thought you like being brushed. ,"When Mendusa was bitten on the neck, she had a --- ","('bnedl', [1 5]); ('idova', [1 4 5]); ('seheyc', [2 6]); ('aracem', [2 5 6])",[3 4 3]
+3,That looks like it might be poison ivy. The other trail might be safer. ,Choosing to take the shortcut through the poison ivy was ---,"('shast', [1 4 5]); ('doore', [1 2 4]); ('ditnic', [1 2 3]); ('catili', [1 3 6])",[4 8]
+4,I\'ve also included more closet space. ,The math teacher hired an architect because she wanted a new ---,"('knidy', [1 2]); ('legia', [1 3]); ('cronee', [2 4]); ('tuvedo', [1 6])",[8]
+5,I want to be successful at my interview. ,He wore an expensive three-piece suit because he had a ---,"('gyrint', [1 2 4]); ('drivet', [3 6]); ('snamea', [1 6]); ('ceedit', [2 4 6]); ('sowdah', [1 4]); ('elchek', [2 6])",[6 8]
