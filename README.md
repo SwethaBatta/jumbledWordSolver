@@ -11,8 +11,7 @@
 
 ### Algorithm
 - Created an anagram dictionary which holds the word in its sorted alphabetic order as the key and all the matching anagrams as values. The jumbled word is sorted and looked up in this dictionary to return results if any.  
-  Sample dictionary record: ‘aegil’ : [‘agile’, ‘galei’, ‘agiel’] 
-
+Sample dictionary record: ‘aegil’ : [‘agile’, ‘galei’, ‘agiel’] 
 -	Created all the available combinations of hint letters when there is more than one solution for a jumbled word.
   Example: If we have two jumbled words with the following possible answers where 2 and 5 are the circled hint letters for the final result,  
   <pre>    
@@ -31,12 +30,13 @@
 -	Choosing the largest word length from the required words to generate all the possible words to create an initalList.  
   Example: If two words are to be generated for the final solution, say an 8 letter word and a 6 letter word, we target to fill out the 8 letter word first. 
 -	Generating all the N length permutations of words.  
-  Filtered based on their:-
-    -	Frequency from freq_dict json file   
-    - Eliminated stop-words, punctuations, words with irrelevant parts of speech
+  The following filtering actions have been performed:-
+    -	Checked to see if the permutation is a valid english word
+    - Using word frequency from freq_dict json file, filtered out words with negative frequency
+    - Eliminated stop-words, punctuations and words with irrelevant parts of speech
     - Sorted in the order of frequency (most frequent to least)
-    - Computed similarity index with the query (comment+question) words
-    - Sorted the final list based on this context similarity index (most similar to least)
+    - Computed contextual similarity index with the query (comment+question) words
+    - Sorted the final list based on this context similarity index (most similar to least) and chose top 50% of the results to improve performance
 - Using this initialList to generate the permutations for remaining required word lengths for the solution. 
 - Choosing a word say token from initialList
 - Removing the letters of token from the available hint list to generate valid words of remaining required lengths using the above generate N length words algorithm.
@@ -52,6 +52,7 @@
   - CMU pronouncing dictionary  - https://github.com/Alexir/CMUdict/blob/master/cmudict-0.7b
   - Python module – pronouncing
 -	Using spark to leverage its parallel processing feature to improve performance.
+- Currently, used top 50% values from the filtered list for further computation to improve efficiency. This value can be programatically incremented when no results or unsatisfactory results are delivered 
 
 
 
