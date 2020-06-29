@@ -1,4 +1,4 @@
-# Jumble word solver
+# Jumbled word solver
 
 ### Problem description
 This jumble word solver unscrambles the letters into words for a given set of jumbled words. It also aims at picking up the hint letters from each of these solved words, and unscrambles them to form a sentence, which is the final solution.
